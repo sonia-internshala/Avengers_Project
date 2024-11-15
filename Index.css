@@ -156,4 +156,143 @@ body{
     font-size:large;
 }
 
+#gallery{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,600px);
+    /* gap:10px; */
+    grid-gap: 10px;
+}
+article{
+    position: relative;
+    overflow: hidden;
+}
+/* #gallery .article1{
+    background-color: brown;
+}
+#gallery .article2{
+    background-color: rgb(85, 42, 165);
+}
+#gallery .article3{
+    background-color: brown;
+}
+#gallery .article4{
+    background-color: rgb(85, 42, 165);
+}
+#gallery .article5{
+    background-color: brown;
+}
+#gallery .article6{
+    background-color: rgb(85, 42, 165);
+} */
+
+#gallery article img{
+    height:100%;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:2;
+}
+#gallery article div{
+    position: absolute;
+    height:200px;
+    width:250px;
+    background-color: brown;
+    top:50%;
+    left:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index:1;
+}
+#gallery article:hover img{
+    transform: translateY(-80%);
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+#contact{
+    display: grid;
+    gap:5px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 100px 500px 300px;
+    
+}
+#contact .article1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: brown;
+}
+#contact .article2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: blueviolet;
+}
+#contact .article3{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact .article3 form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height:400px;
+    width:450px;
+    /* background-color: chartreuse; */
+}
+#contact .article3 form input{
+    height:10%;
+    width:100%;
+}
+#contact .article3 form button{
+    background-color: red;
+    border:1px solid red;
+    color:white;
+    border-radius: 7px;
+    height:50px;
+    width:150px;
+    font-size: large;
+    cursor: pointer;
+}
+#contact .article3 form textarea{
+    width:100%;
+}
+#contact .article4,.article5,.article6,.article7{
+    background-color: blueviolet;
+}
+#contact .article4,.article7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 40px;
+}
+#contact .article5{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#contact .article6{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 
